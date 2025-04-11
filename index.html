@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic Project/Benchmark Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏆 Our Benchmark Title 🏆</h1>
+        <p class="subtitle">One Line Description</p>
+    
+        <div class="header-authors-container"> <div class="authors-list has-text-centered">
+                <span class="author-block"><a href="#">Author One</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="#">Author Two</a><sup>2</sup>,</span>
+                <span class="author-block">Author Three<sup>1</sup>,</span>
+                <span class="author-block"><a href="#">Author Four</a><sup>2</sup></span>
+                </div>
+            <div class="affiliations has-text-centered">
+                <span class="affiliation-block"><sup>1</sup>Your Institution One,</span>
+                <span class="affiliation-block"><sup>2</sup>Your Institution Two</span>
+                </div>
+        </div>
+        <nav>
+            <a href="#" class="button"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="button"><i class="fas fa-file-alt"></i> Paper</a>
+            <a href="submit.html" class="button submit-button"><i class="fas fa-upload"></i> Submit Results</a>
+            </nav>
+    </header>
+
+    <main>
+
+
+
+        <section id="abstract" class="section">
+            <h2 class="title is-3">Introduction</h2>
+            <div class="content abstract-content has-text-justified">
+                <p>
+                    Our paper abstract copied as the introduction.
+                </p>
+            </div>
+        </section>
+
+        <section id="leaderboard" class="section">
+            <h2 class="title is-3">Leaderboard</h2>
+            <p class="intro-text">
+                Results are grouped by evaluation criteria or metric sets. Select a tab below to view the corresponding leaderboard.
+                We might separate structure based metrics from traditional ones?
+            </p>
+
+            <div class="tabs is-centered">
+                <ul>
+                    <li class="is-active" data-target="panel-set1"><a title="Metric Set 1">Traditional Metrics</a></li>
+                    <li data-target="panel-set2"><a title="Metric Set 2">Structure Based Metrics</a></li>
+                    <li data-target="panel-set3"><a title="Overall Performance">Overall Performance</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-panels">
+                <div id="panel-set1" class="tab-panel" style="display: block;">
+                   <p class="panel-notice">Notice: Details might include parameters like temperature (t), top-p, etc.</p>
+                   <div class="table-container">
+                       <table class="leaderboard-table">
+                           <thead>
+                               <tr>
+                                   <th>Rank</th>
+                                   <th>Method Name</th>
+                                   <th>Details / Parameters</th>
+                                   <th>Metric A</th>
+                                   <th>Metric B</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td><p>1</p><span class="date-label">2025-04-10</span></td>
+                                   <td><p>HyperOpt Algorithm v3</p><p class="submitted-by">Team Alpha</p></td>
+                                   <td><p>t=1.0, top-p=0.9</p></td>
+                                   <td>98.5</td>
+                                   <td>110ms</td>
+                               </tr>
+                               <tr>
+                                   <td><p>2</p><span class="date-label">2025-04-08</span></td>
+                                   <td><p>Enhanced Random Search</p><p class="submitted-by">Jane Doe</p></td>
+                                   <td><p>t=0.8</p></td>
+                                   <td>95.0</td>
+                                   <td>90ms</td>
+                               </tr>
+                               <tr>
+                                   <td><p>3</p><span class="date-label">2025-04-11</span></td>
+                                   <td><p>Bayesian Optimization Pro+</p><p class="submitted-by">Research Group Beta</p></td>
+                                   <td><p>default settings</p></td>
+                                   <td>99.1</td>
+                                   <td>240ms</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+                </div>
+                <div id="panel-set2" class="tab-panel" style="display: none;">
+                   <p class="panel-notice">Notice: Metrics here focus on robustness and efficiency.</p>
+                   <div class="table-container">
+                       <table class="leaderboard-table">
+                            <thead>
+                               <tr>
+                                   <th>Rank</th>
+                                   <th>Method Name</th>
+                                   <th>Details / Parameters</th>
+                                   <th>Robustness Score</th>
+                                   <th>Efficiency (Ops/sec)</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td><p>1</p><span class="date-label">2025-04-11</span></td>
+                                   <td><p>Bayesian Optimization Pro+</p><p class="submitted-by">Research Group Beta</p></td>
+                                   <td><p>default settings</p></td>
+                                   <td>0.95</td>
+                                   <td>50.5</td>
+                               </tr>
+                               <tr>
+                                   <td><p>2</p><span class="date-label">2025-04-10</span></td>
+                                   <td><p>HyperOpt Algorithm v3</p><p class="submitted-by">Team Alpha</p></td>
+                                   <td><p>t=1.0, top-p=0.9</p></td>
+                                   <td>0.92</td>
+                                   <td>65.1</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+                </div>
+                <div id="panel-set3" class="tab-panel" style="display: none;">
+                   <p class="panel-notice">Notice: This score combines multiple metrics.</p>
+                    <div class="table-container">
+                       <table class="leaderboard-table">
+                            <thead>
+                               <tr>
+                                   <th>Rank</th>
+                                   <th>Method Name</th>
+                                   <th>Submitted By</th>
+                                   <th>Overall Score</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td><p>1</p><span class="date-label">2025-04-11</span></td>
+                                   <td>Bayesian Optimization Pro+</td>
+                                   <td>Research Group Beta</td>
+                                   <td>97.8</td>
+                               </tr>
+                               <tr>
+                                   <td><p>2</p><span class="date-label">2025-04-10</span></td>
+                                   <td>HyperOpt Algorithm v3</td>
+                                   <td>Team Alpha</td>
+                                   <td>96.5</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+                </div>
+            </div>
+        </section>
+        <section id="analysis" class="section">
+            <h2 class="title is-3">Analysis</h2>
+            <div class="content analysis-content has-text-justified">
+                <p>
+                    Dataset paper must have some analysis pie chart or some plots.
+                </p>
+                <p>
+                    Further analysis could delve into error patterns or the robustness of methods. This area provides
+                    space for in-depth exploration beyond the raw leaderboard numbers.
+                 </p>
+            </div>
+        </section>
+
+        <section id="submission-info" class="section">
+            <h2>How to Submit New Results</h2>
+            <p>
+                To add your method's performance results to this leaderboard, please prepare your metrics according to the benchmark rules.
+                Ensure you have results for all required metrics.
+            </p>
+            <p>
+                Once your results are ready, click the button below to access the submission form. You will need to provide:
+            </p>
+            <ul>
+                <li>Your Method's Name</li>
+                <li>Your Name or Team Name</li>
+                <li>The calculated values for each relevant metric</li>
+                <li>(Optional) A link to your paper, code repository, or further details.</li>
+                <li>(Optional) Parameter details relevant to the submission.</li>
+            </ul>
+            <p>
+                Submissions may be reviewed before appearing on the leaderboard.
+            </p>
+            <a href="submit.html" class="button submit-button">Go to Submission Form</a>
+        </section>
+        <section id="acknowledgements" class="section">
+            <h2 class="title is-3">Acknowledgements</h2>
+            <div class="content acknowledgements-content has-text-justified">
+                <p>
+                    We thank Jane Doe for insightful
+                    discussions and the XYZ Computing Center for providing computational resources. This work was partially
+                    funded by Grant #12345.
+                </p>
+            </div>
+        </section>
+
+        <section id="bibtex" class="section bibtex-section">
+            <h2 class="title is-3">BibTeX Citation</h2>
+            <p>If you use this benchmark or build upon this work, please cite:</p>
+            <pre><code>@misc{YourProjectKey2025,
+    title={Your Project/Benchmark Title},
+    author={Author One and Author Two and Author Three and Author Four},
+    year={2025},
+    publisher={Your Institution or Conference},
+    url={https://your-project-link.com}
+}</code></pre>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Your Project Name. All rights reserved.</p>
+        </footer>
+
+    <script>
+        // Simple Tab Switching Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tabs ul li');
+            const panels = document.querySelectorAll('.tab-panel');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (event) => {
+                    // Prevent default anchor behavior
+                    event.preventDefault();
+
+                    // Deactivate all tabs and hide all panels
+                    tabs.forEach(item => item.classList.remove('is-active'));
+                    panels.forEach(panel => panel.style.display = 'none');
+
+                    // Activate the clicked tab
+                    tab.classList.add('is-active');
+
+                    // Show the corresponding panel
+                    const targetPanelId = tab.getAttribute('data-target');
+                    const targetPanel = document.getElementById(targetPanelId);
+                    if (targetPanel) {
+                        targetPanel.style.display = 'block';
+                    }
+                });
+            });
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+
+</body>
+</html>

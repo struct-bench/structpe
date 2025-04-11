@@ -1,0 +1,349 @@
+/* --- Basic Reset & Defaults --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 0;
+}
+
+/* --- Header Styling --- */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px 20px;
+    border-bottom: 2px solid #eee;
+    background-color: #fff;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+header .subtitle {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav a.button {
+    margin: 5px 8px;
+}
+
+/* --- Main Content Area --- */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.section {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+h2.title.is-3 {
+    font-size: 1.8em;
+    color: #34495e;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+p.intro-text, p.panel-notice {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+p.panel-notice {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #777;
+}
+
+/* --- General Content Styling --- */
+.content p {
+    margin-bottom: 1em; /* Standard paragraph spacing */
+}
+
+.content.has-text-justified p {
+    text-align: justify;
+}
+
+.has-text-centered {
+    text-align: center;
+}
+
+/* --- Author Section Styling --- */
+.authors-list {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.author-block {
+    display: inline-block;
+    margin: 0 5px;
+    white-space: nowrap;
+}
+
+.author-block a {
+    color: #333;
+    text-decoration: none;
+}
+.author-block a:hover {
+    text-decoration: underline;
+    color: #3273dc;
+}
+
+.affiliations {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.affiliation-block {
+    display: inline-block;
+    margin: 0 5px;
+    white-space: nowrap;
+}
+
+
+/* --- Tab Styling (Mimicking Bulma) --- */
+.tabs {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.tabs ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tabs li {
+    margin: 0;
+}
+
+.tabs a {
+    display: block;
+    padding: 0.75em 1.25em;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    cursor: pointer; /* Indicate clickable */
+}
+
+.tabs a:hover {
+    color: #3273dc;
+    border-bottom-color: #3273dc;
+}
+
+.tabs li.is-active a {
+    color: #3273dc;
+    border-bottom-color: #3273dc;
+    font-weight: 600;
+}
+
+/* --- Leaderboard Table Styling --- */
+.table-container {
+    overflow-x: auto;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+.leaderboard-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #555;
+    white-space: nowrap;
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+.leaderboard-table tbody tr:hover {
+    background-color: #eef6fc;
+}
+
+.leaderboard-table td p {
+    margin-bottom: 4px;
+}
+.leaderboard-table td p:last-child {
+    margin-bottom: 0;
+}
+
+.leaderboard-table .submitted-by {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.leaderboard-table .date-label {
+    display: inline-block;
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 5px;
+}
+
+.leaderboard-table .link {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.leaderboard-table .link:hover {
+    text-decoration: underline;
+}
+
+/* --- Button Styling (Consistent) --- */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* Default blue */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    vertical-align: middle; /* Align icon and text */
+}
+.button i { /* Icon spacing */
+    margin-right: 6px;
+}
+
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+.button.submit-button {
+    background-color: #2ecc71; /* Green for submission */
+}
+
+.button.submit-button:hover {
+    background-color: #27ae60;
+}
+
+/* --- Submission Info Section Styling --- */
+#submission-info {
+    border-top: 3px solid #2ecc71;
+}
+
+#submission-info h2 {
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+
+#submission-info p, #submission-info ul {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+#submission-info ul {
+    list-style: disc;
+    margin-left: 25px;
+}
+
+#submission-info .button {
+    margin-top: 10px;
+}
+
+/* --- BibTeX Section Styling --- */
+.bibtex-section p {
+    margin-bottom: 10px;
+}
+
+.bibtex-section pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: pre-wrap; /* Wrap long lines */
+    word-wrap: break-word; /* Break words if necessary */
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; /* Monospace font */
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.bibtex-section code {
+    background: none;
+    padding: 0;
+    font-size: inherit; /* Inherit font size from pre */
+}
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 25px 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #7f8c8d;
+    background-color: #f9f9f9;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    header .subtitle {
+        font-size: 1em;
+    }
+    h2.title.is-3 {
+        font-size: 1.5em;
+    }
+    .tabs ul {
+        justify-content: flex-start;
+    }
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+    .button {
+        padding: 8px 15px;
+        font-size: 0.95em;
+    }
+    .bibtex-section pre {
+        font-size: 0.85em;
+    }
+}
