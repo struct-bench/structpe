@@ -1,0 +1,620 @@
+[
+  {
+    "text": "I love how easy it is to code in Python",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "This product is terrible",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 2
+  },
+  {
+    "text": "I guess it's okay, not too great but not bad",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Fantastic service, I'll come again soon",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Quality is lacking, I'm really disappointed",
+    "sentiment": "NEGATIVE",
+    "emotion": "SAD",
+    "rating": 2
+  },
+  {
+    "text": "It's just acceptable, does the job",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Absolutely loved the friendly staff",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "I'm frustrated with the slow shipping",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 2
+  },
+  {
+    "text": "Could be better but not the worst",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "A wonderful experience from start to finish",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "The taste was bland, not worth the money",
+    "sentiment": "NEGATIVE",
+    "emotion": "DISAPPOINTED",
+    "rating": 2
+  },
+  {
+    "text": "It meets the basic requirements, nothing special",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "I highly recommend this to all my friends",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "Quality control seems nonexistent",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Neither good nor bad, just average",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Impressed with the speedy resolution of my issue",
+    "sentiment": "POSITIVE",
+    "emotion": "RELIEVED",
+    "rating": 5
+  },
+  {
+    "text": "Very displeased with the poor craftsmanship",
+    "sentiment": "NEGATIVE",
+    "emotion": "SAD",
+    "rating": 2
+  },
+  {
+    "text": "I'm on the fence, haven't decided yet",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "The best investment I've made all year",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "I regret buying this, awful performance",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Simply adequate, does what it says",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Fantastic build quality and easy assembly",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "The product broke after one day of use",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Indifferent, can't say I'm impressed or upset",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Exceeded my expectations in every way",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Horrible experience, not buying again",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "So-so, wouldn't rave about it but not terrible",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Absolutely brilliant design and functionality",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Completely fell apart within a week",
+    "sentiment": "NEGATIVE",
+    "emotion": "SAD",
+    "rating": 1
+  },
+  {
+    "text": "Might recommend it under some conditions",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "I'm thrilled with how well this performs",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "Worst service I've encountered in years",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Not sure how to feel about it, it's just okay",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "A perfect addition to my daily routine",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Entirely useless, zero functionality",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "No strong opinion, does what it's supposed to",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Impeccable craftsmanship and attention to detail",
+    "sentiment": "POSITIVE",
+    "emotion": "IMPRESSED",
+    "rating": 5
+  },
+  {
+    "text": "Sadly, I received a defective unit",
+    "sentiment": "NEGATIVE",
+    "emotion": "SAD",
+    "rating": 1
+  },
+  {
+    "text": "I can take it or leave it, no big deal",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Incredible value for the money spent",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Not worth half the price I paid",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Can't decide if it's great or just okay",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Remarkably smooth operation and easy setup",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "Completely inconsistent performance, I'm done",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Seems average, I'd neither recommend nor avoid",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "This made my life so much easier",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Returned it right away, no use at all",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Hard to comment, it's neither good nor bad",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Stellar performance, I'd buy again",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "A complete waste of money",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Adequate enough for basic needs",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Top-notch build quality, can't recommend enough",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Unreliable, fails most of the time",
+    "sentiment": "NEGATIVE",
+    "emotion": "SAD",
+    "rating": 1
+  },
+  {
+    "text": "Fine for some uses but not amazing",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "I'm blown away by the results",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "It's frustratingly difficult to set up",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 2
+  },
+  {
+    "text": "No strong feelings, it performs adequately",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Works wonderfully, I'm so happy I bought it",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Defective on arrival, I'm very upset",
+    "sentiment": "NEGATIVE",
+    "emotion": "SAD",
+    "rating": 1
+  },
+  {
+    "text": "Hard to say, definitely not the worst",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Everything I needed and more",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "Highly disappointing overall experience",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "I have no strong opinion about it",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "A marvelous find, truly top tier",
+    "sentiment": "POSITIVE",
+    "emotion": "IMPRESSED",
+    "rating": 5
+  },
+  {
+    "text": "Very cheap materials used here",
+    "sentiment": "NEGATIVE",
+    "emotion": "DISAPPOINTED",
+    "rating": 2
+  },
+  {
+    "text": "Serves its purpose, can't say more",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Loving how it simplifies my daily tasks",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Doesn't do what it promised at all",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Neither impressed nor disappointed",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Superb user experience and design",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Completely failed after a short while",
+    "sentiment": "NEGATIVE",
+    "emotion": "SAD",
+    "rating": 1
+  },
+  {
+    "text": "Feels like it needs improvement, but workable",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Delighted by how well this performs",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "Not even close to the description",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 2
+  },
+  {
+    "text": "I'm uninterested, but it functions okay",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "One of the best experiences I've had",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Some parts were missing in the box",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Can't complain, it's neither good nor bad",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "The build quality is outstanding",
+    "sentiment": "POSITIVE",
+    "emotion": "IMPRESSED",
+    "rating": 5
+  },
+  {
+    "text": "Disappointed with the false advertising",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 2
+  },
+  {
+    "text": "It's functional, I have no major gripes",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Fantastic clarity and user-friendly interface",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Shipping took forever and no updates",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 2
+  },
+  {
+    "text": "Works as expected, middle of the road",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Incredible reliability for daily use",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Too many defects, not worth the trouble",
+    "sentiment": "NEGATIVE",
+    "emotion": "SAD",
+    "rating": 2
+  },
+  {
+    "text": "Hasn't stood out, but no regrets either",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Highly reliable and super intuitive",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "Arrived damaged, thoroughly disappointed",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "Not sure how I feel, somewhat acceptable",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Has transformed my workflow for the better",
+    "sentiment": "POSITIVE",
+    "emotion": "IMPRESSED",
+    "rating": 5
+  },
+  {
+    "text": "Doesn't match the hype at all",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 2
+  },
+  {
+    "text": "I'm neutral on this, nothing stands out",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Perfect for beginners, so easy to use",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Terrible instructions, couldn't figure it out",
+    "sentiment": "NEGATIVE",
+    "emotion": "FRUSTRATED",
+    "rating": 2
+  },
+  {
+    "text": "I guess it's passable, I don't mind it",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "I'm in love with the overall performance",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  },
+  {
+    "text": "Super misleading product pages",
+    "sentiment": "NEGATIVE",
+    "emotion": "ANGRY",
+    "rating": 1
+  },
+  {
+    "text": "It's neutral to me, no complaints",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Saved me so much time each day",
+    "sentiment": "POSITIVE",
+    "emotion": "HAPPY",
+    "rating": 5
+  },
+  {
+    "text": "Broke after minimal usage",
+    "sentiment": "NEGATIVE",
+    "emotion": "SAD",
+    "rating": 1
+  },
+  {
+    "text": "I can't decide if I'd buy it again",
+    "sentiment": "NEUTRAL",
+    "emotion": "NEUTRAL",
+    "rating": 3
+  },
+  {
+    "text": "Extremely pleased, top performance",
+    "sentiment": "POSITIVE",
+    "emotion": "EXCITED",
+    "rating": 5
+  }
+]

@@ -1,0 +1,1 @@
+structpe evaluate --private-dataset-name=adult --private-dataset-json=/home/abackurs/c/tabular_data/tabular/data/adult/adult_val_csv.csv --synthetic-data=/home/abackurs/c/tabular_data/tabular/data/adult/adult_val_csv.csv --savedir base_run

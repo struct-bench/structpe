@@ -1,0 +1,18 @@
+{
+    "dataset_name": "search_query",
+    "samples": [
+      {
+        "query_text": "best hotels",
+        "intent": "INFORMATIONAL",
+        "topic": "TRAVEL",
+        "word_count": 2
+      },
+      {
+        "query_text": "buy laptops now",
+        "intent": "TRANSACTIONAL",
+        "topic": "TECHNOLOGY",
+        "word_count": 3
+      }
+    ]
+  }
+  

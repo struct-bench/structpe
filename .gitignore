@@ -1,0 +1,6 @@
+*_run/*
+*_eval.json
+*.pyc
+.aider*
+*env*
+*.pyc

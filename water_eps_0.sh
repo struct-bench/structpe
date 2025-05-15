@@ -1,0 +1,1 @@
+structpe evaluate --private-dataset-name=water --private-dataset-json=data/water_private.csv --synthetic-data=/home/abackurs/c/tabular_data/tabular_data/outputs/water_e_10_ns_2000_v_3_mtp_0.5_mcp_0.5_eps_4.0_session_dp_vanilla/0/samples_csv.csv --savedir base_run_water_eps_0

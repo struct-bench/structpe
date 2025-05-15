@@ -1,0 +1,1 @@
+structpe evaluate --private-dataset-name=adult --private-dataset-json=data/adult_private.csv --synthetic-data=data/adult_synthetic.csv --savedir base_run

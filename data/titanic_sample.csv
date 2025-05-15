@@ -1,0 +1,4 @@
+passenger_id,survived,pclass,name,sex,age
+1,1,1,"Allen, Miss. Elisabeth",female,29
+2,0,3,"Smith, Mr. John",male,37
+3,1,2,"Brown, Mrs. Martha",female,45

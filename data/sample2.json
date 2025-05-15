@@ -1,0 +1,23 @@
+[
+    {
+      "text": "Wow this item is superb",
+      "sentiment": "POSITIVE",
+      "emotion": "HAPPY",
+      "rating": 4
+    },
+    {
+      "text": "Not worth the money. Disappointing.",
+      "sentiment": "NEGATIVE",
+      "emotion": "ANGRY",
+      "rating": 1
+    },
+    {
+      "text": "Quite average. Maybe I'd buy again if cheaper.",
+      "sentiment": "NEUTRAL"
+    },
+    {
+      "text": "Fantastic service. Could not be happier",
+      "rating": 5
+    }
+  ]
+  

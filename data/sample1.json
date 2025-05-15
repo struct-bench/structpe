@@ -1,0 +1,19 @@
+[
+    {
+      "text": "I really love this product!",
+      "sentiment": "POSITIVE",
+      "emotion": "HAPPY",
+      "rating": 5
+    },
+    {
+      "text": "It's okay, but I'm not too impressed",
+      "sentiment": "NEUTRAL",
+      "emotion": "SAD",
+      "rating": 3
+    },
+    {
+      "text": "This is terrible",
+      "sentiment": "NEGATIVE"
+    }
+  ]
+  

@@ -1,0 +1,26 @@
+[
+    {
+        "text": "USER: \"Hello!\"\nGPT: \"Hi there!\""
+    },
+    {
+        "text": "USER: \"How's the weather?\"\nGPT: \"It's sunny outside.\""
+    },
+    {
+        "text": "2 + 2 * 3"
+    },
+    {
+        "text": "(5 + 10) / 2"
+    },
+    {
+        "text": "2023-05-12"
+    },
+    {
+        "text": "ERROR - Something went wrong"
+    },
+    {
+        "text": "2022-13-45"
+    },
+    {
+        "text": "2023-06-15 14:30:00 - INFO - System running normally"
+    }
+]

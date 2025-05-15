@@ -1,0 +1,1 @@
+structpe evaluate --private-dataset-name=arena --private-dataset-json=data/arena_private.csv --synthetic-data=data/arena_synthetic.csv --savedir base_run_arena

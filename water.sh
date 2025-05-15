@@ -1,0 +1,1 @@
+structpe evaluate --private-dataset-name=water --private-dataset-json=data/water_private.csv --synthetic-data=data/water_synthetic.csv --savedir base_run_water

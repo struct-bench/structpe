@@ -1,0 +1,3 @@
+lark
+azure-cli
+azure-identity
