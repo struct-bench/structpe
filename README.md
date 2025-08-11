@@ -77,7 +77,9 @@ Struct-Bench uses a **registry** pattern to easily integrate more datasets. Here
    - Define your sample class (`MyNewSample`) and a container class (`MyNewDataset`).
    - Use existing atomic types from `_types.py` or define constraints as needed.
 
-2. **Define the context-free grammar of the data structure**
+2. **Define the context-free grammar (CFG) of the data structure**
+   - We use [Lark](https://lark-parser.readthedocs.io/en/stable/) to parse CFG.
+   - [This link](https://www.tutorialspoint.com/automata_theory/context_free_grammar_introduction.htm) provides an introduction to CFG.
 
 3. **Register the Dataset**
    - At the end of that file:
