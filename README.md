@@ -1,28 +1,29 @@
-# structpe
+<h1 align="center"> Struct-Bench: A Benchmark for Differentially Private Structured Text Generation</h1>
 
-## Introduction
-A flexible Python library for building, annotating, generating, and evaluating multiple dataset types for DP-synthetic datasets.
+<p align="center">
+<a href="https://struct-bench.github.io"> Leaderboard</a>
+</p>
 
-This project implements a modular pipeline that supports:
-1. Multiple **Dataset** classes (e.g. search queries, sentiment, conversation transcripts, Titanic data, ICLR reviews, hotel bookings).
-2. Reflection-based **serialization** and **deserialization** with `_types.py` for enumerations and atomic classes.
-3. A **generator** for producing synthetic data (currently demonstrated with `setiment` dataset).
-4. An **evaluator** that can verify constraints and output detailed eval metrics.
+This repository implements Struct-Bench, a novel evaluation framework and a benchmark to evaluate synthetic data quality relative to a real dataset, where the real dataset features complex inter-field structural relations, and at least some fields contain natural language. We illustrate the dataset level and sample level views into Struct-Bench as follows:
+
+<p align="center">
+  <img src="figures/struct-bench.png" width="100%">
+</p>
 
 ---
 ## Table of Contents
 1. [Project Setup](#project-setup)
 2. [Forking & Pull Requests](#forking--pull-requests)
-3. [Adding a New Dataset](#adding-a-new-dataset)
-4. [Running a Pipeline](#running-a-pipeline)
-5. [Running Unit Tests](#running-unit-tests)
-6. [Key Files & Directories](#key-files--directories)
+3. [Adding and Evaluating Datasets](#adding-and-evaluating-datasets)
+4. [Generating Synthetic Datasets](#generating-synthetic-datasets)
+5. [Key Files & Directories](#key-files--directories)
+6. [Acknowledgement](#acknowledgement)
 
 ---
 ## Project Setup
 1. **Clone the Repo**
 ```bash
-git clone https://github.com/vyraun/structpe.git
+git clone hhttps://github.com/struct-bench/structpe.git
 cd structpe
 ```
 
@@ -37,16 +38,9 @@ pip install .
 pip install -e .
 ```
 
-3. **Confirm Installation**
-- After installing, run:
-```bash
-structpe list datasets
-```
-- You should see all registered datasets (e.g. `search_query`, `sentiment`, `iclr_review`, `conversation_dataset`, `titanic_dataset`, `hotel_booking`, etc.).
-
 ---
 ## Forking & Pull Requests
-Contributions to **structpe** are welcome! To propose a change or new feature, follow these steps:
+Adding new datasets to **Struct-Bench** are welcome! To propose a change or new feature, follow these steps:
 1. **Fork the Repo on GitHub**
    - Visit the [structpe GitHub page](https://github.com/yourusername/structpe), click “Fork”, and choose your GitHub account.
 
@@ -76,85 +70,79 @@ git push origin my-new-dataset
 - The maintainers will review your PR, offer feedback, and merge once approved.
 
 ---
-## Adding a New Dataset
-Structpe uses a **registry** pattern to easily integrate more datasets. Here’s how:
+## Adding and Evaluating Datasets
+Struct-Bench uses a **registry** pattern to easily integrate more datasets. Here’s how:
 1. **Create a New File**
    - In `structpe/dataset/`, for example: `my_new_dataset.py`.
    - Define your sample class (`MyNewSample`) and a container class (`MyNewDataset`).
    - Use existing atomic types from `_types.py` or define constraints as needed.
 
-2. **Register the Dataset**
+2. **Define the context-free grammar (CFG) of the data structure**
+   - We use [Lark](https://lark-parser.readthedocs.io/en/stable/) to parse CFG.
+   - [This link](https://www.tutorialspoint.com/automata_theory/context_free_grammar_introduction.htm) provides an introduction to CFG.
+
+3. **Register the Dataset**
    - At the end of that file:
 ```python
 from structpe.dataset.registry import register_dataset
 register_dataset("my_new_dataset", MyNewDataset)
 ```
-   - Now you can do `structpe run --dataset-name=my_new_dataset`.
+4. (Optional) Provide any `dataset_metric(level=...)` functions to compute custom metrics.
+5. (Optional) If lines in grammar have fields that are logically comparable, define `compute_node_similarities = [("fieldA", "fieldB"), ...]`.
 
-3. **Update run.py** (Optional)
-   - If you want a default sample for demonstration:
+Then run:
+
+```bash
+structpe evaluate \
+        --private-dataset-name=my_dataset \
+        --private-dataset-json=data/my_dataset.json \
+        --synthetic-data=data/synthetic_dataset.json \
+        --savedir results_my_dataset
+```
+
+You’ll get a comprehensive JSON summarizing correctness, adjacency, grammar, KNN-based metrics, plus your custom dataset metrics.
+
+Please refer to <a href="structpe/dataset">this link</a> for more details on the dataset evaluation framework.
+
+
+---
+## Generating Synthetic Datasets
+
+We adopt the DP Fine-tuning [(Yu et al. 2021)](https://arxiv.org/pdf/2110.06500) and Augmented Private Evolution (Aug-PE) algorithm [(Xie et al. 2024)](https://arxiv.org/abs/2403.01749) to generate synthetic datasets on graph-structured data ([ShareGPT](https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered/tree/bcd32a724d8460ebe14e1d05b0195e30e9a46cb1), [ICLR reviews](https://openreview.net/group?id=ICLR.cc/2024/Conference)), tabular data ([Water](https://www.kaggle.com/datasets/tharunmss/water-bottle-dataset-flipkart), [Arena](https://arxiv.org/pdf/2306.05685), [Adult](https://archive.ics.uci.edu/dataset/2/adult)), and attribute controllable data ([Reviews](https://www.kaggle.com/datasets/structpedataset/structpe-synthetic-datasets), [Grounding](https://www.kaggle.com/datasets/structpedataset/structpe-synthetic-datasets)). We adopt the external library [microsoft/dp-transformers](https://github.com/microsoft/dp-transformers/tree/main/research/synthetic-text-generation-with-DP) for DP Fine-tuning, and [microsoft/DPSDA](https://github.com/microsoft/DPSDA) for Aug-PE.
+
+We also implement the Aug-PE algorithm in <a href="structpe/generator">structpe/generator</a> to generate synthetic attribute controllable data. 
+
+Generate DP synthetic text with Aug-PE:
+
 ```python
-elif dataset_name == "my_new_dataset":
-    from structpe.dataset.my_new_dataset import MyNewSample
-    ds.add_sample(MyNewSample(...))
-```
-   - In `pipeline_command`, parse the JSON fields for your new sample.
+from structpe.generator.generation import run_generation_pipeline
 
-4. **Test**
-   - Add or modify a test in `tests/test_dataset.py` to ensure everything works.
-
----
-## Running a Pipeline
-Structpe’s CLI has a `pipeline` command that reads from a JSON file describing the dataset and samples.
-1. **Create a JSON** (e.g. `my_pipeline.json`):
-```json
-{
-  "dataset_name": "search_query",
-  "samples": [
-    {
-      "query_text": "buy shoes",
-      "intent": "TRANSACTIONAL",
-      "topic": "SHOPPING",
-      "word_count": 2
-    },
-    {
-      "query_text": "flight deals",
-      "intent": "NAVIGATIONAL",
-      "topic": "TRAVEL",
-      "word_count": 2
-    }
-  ]
-}
+synthetic_texts = run_generation_pipeline(
+        file_path="data/input.tsv",
+        file_type="tsv",   # or "csv" or "json"
+        dataset_name="my_dataset",
+        concurrency=4,
+        init_count=10,
+        iterations=3,
+        endpoint="https://myazureendpoint.openai.azure.com/",   # replace to your OpenAI endpoint
+        deployment="gpt-4"
+)
 ```
 
-2. **Run the Pipeline**:
-```bash
-structpe pipeline --json-file=my_pipeline.json
-```
+### Some key parameters:
+- **`file_path`**: Path to your input file (`JSON`, `CSV`, or `TSV`).
+- **`file_type`**: Must be `"json"`, `"csv"`, or `"tsv"`.
+- **`concurrency`**: Number of threads to use for Azure OpenAI calls.
+- **`init_count`**: Initial sample count.
+- **`iterations`**: How many iteration cycles.
+- **`endpoint`**: Your Azure OpenAI endpoint.
+- **`deployment`**: Name of the model deployment (e.g., `"gpt-4"`).
 
-3. **(Optional) Write Evaluation Stats to JSON**
-```bash
-structpe pipeline --json-file=my_pipeline.json --eval-json-out=my_metrics.json
-```
-- The evaluator will output a JSON file with distribution stats, constraint failures, etc.
+### Return Value:
+A list of final generated strings.
 
----
-## Running Unit Tests
-Structpe includes tests under `tests/`.
-1. **Install** in your environment (or editable mode):
-```bash
-pip install -e .
-```
-2. **Run All Tests**:
-```bash
-python -m unittest discover tests
-```
-3. **Run a Specific Test**:
-```bash
-python -m unittest tests.test_dataset
-```
-4. **Add New Tests**:
-   - In `tests/`, create or update `test_*.py` files to cover your changes or new datasets.
+Please refer to <a href="structpe/generator">this link</a> for more details on the synthetic data generation.
+
 
 ---
 ## Key Files & Directories
@@ -177,13 +165,18 @@ python -m unittest tests.test_dataset
   Houses the CLI. Subcommands:
     - `list datasets`: Show registered datasets
     - `run --dataset-name=XYZ`: Instantiate and evaluate a dataset
-    - `pipeline --json-file=FILE`: Build a dataset from JSON samples, then evaluate
 
 - **`tests/`**  
   Contains unit tests such as:
     - `test_dataset.py` (checks correctness of dataset classes),
     - `test_pipeline.py` (verifies pipeline logic),
     - `test_evaluator.py` (tests evaluation output).
+
+---
+## Acknowledgement
+
+- [microsoft/DPSDA](https://github.com/microsoft/DPSDA)
+- [microsoft/dp-transformers](https://github.com/microsoft/dp-transformers/tree/main/research/synthetic-text-generation-with-DP)
 
 ---
 
